@@ -3,43 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script
+			src="https://code.jquery.com/jquery-2.2.4.js"
+			integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+			crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Document</title>
 </head>
 <body>
 	<!-- Header and Navigation start -->
-	<header>
+	<header id="home">
 		<div class="container">
-			<nav>
+			<nav class="head_nav">
 				<div class="logo">
 					<img src="img/Vector Smart Object.png">
 				</div>
 				<ul class="navigation">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Expertise</a></li>
-					<li><a href="#">Teams</a></li>
-					<li><a href="#">Works</a></li>
-					<li><a href="#">People Say</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#expertise">Expertise</a></li>
+					<li><a href="#team">Teams</a></li>
+					<li><a href="#people_say">People Say</a></li>
+					<li><a href="#contacts">Contact</a></li>
 				</ul>
 			</nav>
 
 			<div class="head_main">
-				<h1>We Are Awesome Creative Agency</h1>
-				<hr />
-				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
-
+				<h1 class="head_main_title">We Are Awesome Creative Agency</h1>
+				<hr class="head_main_hr" />
+				<p class="head_main_info">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
 				<a class="l_more" href="#">Learn More</a>
-
 			</div>
 		</div>
 	</header>
 	<!-- Header and Navigation end -->
 	<main>
 		<div class="container">
-			<div class="story">
+			<div class="story" id="about">
 				<img class = "imgStory" src="img/Left.png">
 				<div class="storyMain">
 					<h2>Our Story</h2>
@@ -54,11 +56,12 @@
 		</div>
 		<div class="movie">
 			
-			<a href="" ><img src="img/Play Icon.png"></a>
-
+			<!--<a href="" ><img src="img/Play Icon.png"></a>-->
+			<video class="video" src="img/Nature%20-%20787.mp4" controls muted width="900" height="500"></video>
+			
 		</div>
 		<div class="container">
-			<div class="expertise">
+			<div class="expertise" id="expertise">
 				<h2>Expertise</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 				<hr />
@@ -71,18 +74,25 @@
 					<div class="items">
 						<img style="height: 50px" src="img/PUT YOUR ICON HERE (1).png" alt="">
 						<p><b>Web Design and Development</b></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aliquid, minima incidunt esse soluta minus.
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Doloremque aliquid, minima incidunt esse soluta minus.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 						</p>
 					</div>
 					<div class="items">
 						<img src="img/PUT YOUR ICON HERE (2).png" alt="">
 						<p><b>Web Design and Development</b></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aliquid, minima incidunt esse soluta minus.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Doloremque aliquid, minima incidunt esse soluta minus
+							.</p>
 					</div>
 					<div class="items">
 						<img src="img/PUT YOUR ICON HERE (3).png" alt="">
 						<p><b>Web Design and Development</b></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aliquid, minima incidunt esse soluta minus.</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Doloremque aliquid, minima incidunt esse soluta minus.</p>
 					</div>
 					<div class="items">
 						<img src="img/PUT YOUR ICON HERE (4).png" alt="">
@@ -92,12 +102,16 @@
 					<div class="items">
 						<img src="img/PUT YOUR ICON HERE (6).png" alt="">
 						<p><b>Web Design and Development</b></p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aliquid, minima incidunt esse soluta minus.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Doloremque aliquid, minima incidunt esse soluta minus.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="ourTeamBack">
+		<div class="ourTeamBack" id="team">
 			
 			<div class="ourTeam">
 				<h2>Meet our amazing team</h2>
@@ -105,58 +119,40 @@
 				<hr />
 				<div class="allUnits">
 					<div class="unit" >
-						<img src="img/1.png" width="100%">
+						<img src="img/17241-200.png">
+						<div class="unit_inner_wrap">
 						<p>Unit Unit</p>
-						<p>Webdesigner</p>
+						<p>Web-designer</p>
+						</div>
 					</div>
 					<div class="unit">
-						<img src="img/1.png">
-						<p>Unit Unit</p>
-						<p>Webdesigner</p>
+						<img src="img/17241-200.png">
+						<div class="unit_inner_wrap">
+							<p>Unit Unit</p>
+							<p>Webdesigner</p>
+						</div>
 					</div>
 					<div class="unit">
-						<img src="img/1.png">
-						<p>Unit Unit</p>
-						<p>Webdesigner</p>
+						<img src="img/17241-200.png">
+						<div class="unit_inner_wrap">
+							<p>Unit Unit</p>
+							<p>Webdesigner</p>
+						</div>
 					</div>
 					<div class="unit">
-						<img src="img/1.png">
-						<p>Unit Unit</p>
-						<p>Webdesigner</p>
+						<img src="img/17241-200.png">
+						<div class="unit_inner_wrap">
+							<p>Unit Unit</p>
+							<p>Webdesigner</p>
+						</div>
 					</div>
 				</div>
 				<p>Become part of our dream team, let’s join us !</p>
 				<a class="l_more" href="#">We are hiring</a>
 			</div> 	
 		</div>
-
-
-
-	<!--	
-		<div class="works">
-			<h2>Our Works</h2>
-			<p>See all our works</p>
-			<div class="photo" style="background-color: grey; height: 400px;"></div>
-			<a class="l_more" href="#">Load more</a>
-		</div>
-		<div class="testimonials">
-			<h2>“</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nesciunt nisi non architecto tempora numquam quam quo mollitia laudantium autem inventore fuga, asperiores necessitatibus odit quibusdam sunt minima, voluptatibus in.</p>
-			<ul>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-			</ul>
-		</div>
-	-->
-
-
 	<div class="container">
-		<div class="conection">
+		<div class="conection" id="people_say">
 			<div class="formAll">
 				<h2>Give us a good news</h2>
 				
@@ -169,13 +165,13 @@
 					<label for="subject"></label>
 					<input type="text" name="subject" id="subject" placeholder="Subject"><br />
 					<label for="comment"></label>
-					<textarea name="comment" placeholder="Your message" rows="10"></textarea><br />
-					<input class="l_more" type="submit" name="submit">
+					<textarea name="comment" placeholder="Your message" rows="10" id="comment"></textarea><br />
+					<input class="button" type="submit" name="submit">
 				</form>
 				
 			</div>
 			<div class="clients">
-				<h2>Our happy client</h2>
+				<h2>Our happy clients</h2>
 				<div class="allClients">
 					<div class="client_unit">
 						<img src="img/Zara_Logo.png">
@@ -215,28 +211,30 @@
 
 
 
-<footer>
+<footer id="contacts">
 
-	<div class="footUp">
+	<div class="footUp" >
 
 		<div class="foot_item">
+			<a href="#home">
 			<img src="img/Vector Smart Object.png" title="logo">
+			</a>
 			<p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit. lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
 		</div>
 
 		<div class="foot_item">
 
-			<p>Our Studio</p>
+			<p class="studio-title">Our Studio:</p>
 			<div class="adress">
 				<img src="img/big104.png">
 				<p>Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat
 				11480 - Indonesia</p>
 			</div>
-			<div class="adress">
+			<div class="phone">
 				<img src="img/phone351.png">
-				<p>+380950000099</p>
+				<p> +38 095 000 00 00</p>
 			</div>
-			<div>
+			<div class="adress">
 				<div class="social">
 					<div class="soc"><a href="#"><img src="img/twitter16.png" alt=""></a></div>
 					<div class="soc"><a href="#"><img src="img/facebook25.png" alt=""></a></div>
@@ -258,8 +256,15 @@
 
 
 </footer>
-
-
-
+	<script>
+        $(document).ready(function() {
+            $('a[href^="#"]').click(function(){
+                var el = $(this).attr('href');
+                $('html').animate({
+                    scrollTop: $(el).offset().top}, 1000);
+                return false;
+            });
+        });
+	</script>
 </body>
 </html>
