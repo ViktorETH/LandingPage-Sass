@@ -37,25 +37,26 @@ header
 @media screen and (max-width: 800px)
  .container
   width: 95%
-
  	.head_main
  		width: 95%
-
- 	h1
+ 	.head_main_title
  		width: 95%
- 		font-size: 2.3em
+ 		font-size: 1.5em
  		padding: 0
-
- 	.head_main hr
- 		width: 30%
-
- 	.head_main p
- 		text-align: justify
- 		width: 95%
- 		margin: 0
- 		padding-top: 10%
- 		
-  
+		 order: 1
+		 text-shadow: 1px 1px 10px black
+		 font-weight: lighter
+ 	.head_main_hr
+		 width: 90%
+		 margin: 0
+ 	.head_main_info
+		 text-align: justify
+		 width: 95%
+		 margin: 0
+		 padding-top: 10%
+		 display: none
+	.l_more
+		display: none
 
 nav 
 	@include item_row
@@ -66,20 +67,26 @@ nav
 	nav
 		flex-direction: column
 		align-items: center
-		margin: auto
-		padding-top: 10%
 
 		.navigation
-			width: 95%
+			width: 100%
 			padding: 0
-			justify-content: center
+			flex-direction: column
+			align-items: center
+			font-size: 2em
+			font-weight: lighter
+			margin-bottom: 15%
+			margin-top: 5%
+			li
+				width: 100%
+				text-align: center
+				margin: 2%
+				text-shadow: 3px 3px 5px black
 
 		.logo img
 			width: 100%
-			padding: 0
-			margin: 0
-
-	
+			align-self: flex-start
+			margin-top: 0
 
 .logo img
 	width: 150%
@@ -89,7 +96,8 @@ nav
 	text-transform: uppercase
 	width: 50%
 	font-weight: bold
-
+	a
+		transition: .5s
 	a:hover
 		color: #03bfcd
 
@@ -113,18 +121,16 @@ h1
 	width: 5%
 	color: #03bfcd
 
-.l_more 
-	border: 1px solid #fff 
-	border-color: #03bfcd
+.l_more
+	border: 1px solid #fff
 	color: #03bfcd
 	padding: 10px
 	margin-top: 10%
 	margin-bottom: 5%
+	transition: .5s
 	&:hover
 		background-color: #0d0d32
-		
-
-	
+		color: white
 
 /* main start */
 
@@ -136,6 +142,9 @@ h1
 	padding-bottom: 10%
 	text-align: justify
 	line-height: 1.5em
+	@media screen and (max-width: 1200px)
+		img
+			width: 25%
 
 .storyMain
 	display: flex
@@ -143,6 +152,9 @@ h1
 	align-items: flex-start
 	padding-left: 
 	width: 75%
+	@media screen and (max-width: 1200px)
+		width: 70%
+
 
 	.l_more
 		margin: 0
@@ -153,11 +165,17 @@ h1
 		margin-top: 0
 
 .movie
-	@include item_column
-	background-image: url('../img/PUT YOUR IMAGE HERE2.png')
-	background-repeat: no-repeat
+	@include item_row
+	margin: 0 auto
+	padding: 1%
+	background: url("../img/PUT YOUR BACKGROUND HERE 3.png")
 	background-size: cover
-
+	background-repeat: no-repeat
+	video
+		margin: 0 auto
+		@media screen and (max-width: 800px)
+			width: 100%
+			height: 100%
 	a
 		margin: 14%
 
@@ -174,10 +192,6 @@ h1
 
 		.imgStory
 			width: 30%
-
-
-
-
 
 .expertise
 	@include item_column
@@ -252,23 +266,23 @@ h1
 				padding-left: 5%
 				padding-right: 5%
 
-
-		
-	
 .ourTeamBack
 	background-image: url('../img/BACKGROUND_header.png')
 	background-repeat: no-repeat
 	background-size: cover
 	color: #fff
 	text-align: center
-
+	text-shadow: 1px 1px 2px black
 	.ourTeam
 		@include item_column
 		padding: 2%
-
 		h2
 			margin-bottom: 0
-
+			font-weight: lighter
+			font-size: 2em
+		p
+			font-size: larger
+			font-weight: lighter
 		hr
 			width: 5%
 			margin-top: 0
@@ -284,22 +298,43 @@ h1
 			width: 80%
 			padding-top: 2%
 			padding-bottom: 3%
-
 			.unit
 				@include item_column
-				border: 1px solid #fff
-				padding-bottom: 1%
 				margin-bottom: 4%
-
+				width: 20%
+				background: white
+				opacity: .9
+				border-radius: 5px
+				img
+					width: 75%
+					border: 1px solid #fff
+					border-radius: 50%
+					margin: 5%
+					background: white
+					box-shadow: inset 1px 1px 10px 5px gray
+					padding: 5%
+				.unit_inner_wrap
+					width: 90%
+					background: rgba(0,0,0,.2)
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					padding: 5%
+					text-shadow: none
+				@media screen and (max-width: 800px)
+					width: 100%
+					img
+						padding: 5%
 				p
-					margin-bottom: 0
+					margin: 0
+					font-size: large
+					color: rgba(0,0,0,1)
 			
 .conection
 	@include item_row
 	padding: 5%
-
 	.formAll
-		display-flex
 		flex-direction: column
 		width: 49%
 
@@ -309,21 +344,43 @@ h1
 
 			.l_more
 				margin-top: 5%
-
+			.button
+				border: 1px solid #fff
+				color: #03bfcd
+				padding: 10px
+				margin-bottom: 5%
+				transition: .5s
+				&:hover
+					background-color: #0d0d32
+					color: white
 
 .clients
 	display: flex
 	flex-direction: column
 	width: 35%
-
 	.allClients
 		display: flex
 		flex-direction: row
 		justify-content: space-around
 		flex-wrap: wrap
-
+		@media screen and (max-width: 800px)
+			//flex-direction: column
 		.client_unit
 			padding: 3%
+			@media screen and (max-width: 1500px)
+				width: 40%
+				img
+					width: 100%
+			@media screen and (max-width: 1200px)
+				width: 35%
+				img
+					width: 100%
+			@media screen and (max-width: 800px)
+				width: 44%
+				img
+					width: 100%
+
+
 
 @media screen and (max-width: 800px)
 	.conection
@@ -338,9 +395,6 @@ h1
 			flex-wrap: wrap
 			justify-content: center
 			width: 95%
-
-
-
 
 footer
 	background-image: url('../img/PUT YOUR BACKGROUND HERE footer.png')
@@ -370,6 +424,7 @@ footer
 				padding: 2%
 
 .adress
+	width: 100%
 	p
 		padding-left: 2%				
 
@@ -377,12 +432,31 @@ footer
 	display: flex
 	flex-direction: row
 	justify-content: center
+	align-items: center
 	margin: auto
 	border: 1px solid #fff
 	border-radius: 30%
 	padding: 2%
-	width: 4%
+	width: 25px
+	height: 25px
+	a
+		display: flex
+		flex-direction: row
+		justify-content: center
+		width: 100%
+		margin: 0 auto
+		img
+			margin: 0 auto
 
+.social
+	width: 100%
+.soc:hover
+	border-color: #03bfcd
+	color: #03bfcd
+.phone
+	display: flex
+	flex-direction: row
+	align-items: center
 .footUn
 	@include item_row
 	width: 80%
@@ -400,9 +474,28 @@ footer
 			flex-direction: column
 			align-items: center
 			.foot_item
-				width: auto
+				@include item_column
+				width: 100%
+				img
+					margin: 0 auto
 				p
 					text-align: justify
+				.studio-title
+					margin: 0
+					align-self: flex-start
+				.phone
+					display: flex
+					flex-direction: row
+					align-items: center
+				.adress
+					width: 100%
+					p
+						margin: 0
+				.social
+					width: 100%
+			.foot_item:first-child
+				@include item_column
+
 
 		.footUn
 			flex-direction: column
