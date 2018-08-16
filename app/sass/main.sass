@@ -23,134 +23,124 @@ ul
 	justify-content: space-between
 	flex-wrap: wrap
 
-header
-	background-image: url('../img/BACKGROUND_header.png')
-	background-repeat: no-repeat
-	background-size: cover
-
 .container
 	display: flex
 	flex-direction: column
 	width: 75%
 	margin: auto
-
-@media screen and (max-width: 800px)
- .container
-  width: 95%
- 	.head_main
- 		width: 95%
- 	.head_main_title
- 		width: 95%
- 		font-size: 1.5em
- 		padding: 0
-		 order: 1
-		 text-shadow: 1px 1px 10px black
-		 font-weight: lighter
- 	.head_main_hr
-		 width: 90%
-		 margin: 0
- 	.head_main_info
-		 text-align: justify
-		 width: 95%
-		 margin: 0
-		 padding-top: 10%
-		 display: none
-	.l_more
-		display: none
-
-.head_nav
-	@include item_row
-	align-items: center
-	padding-top: 2%
-	@media screen and (max-width: 1200px)
-		flex-direction: column
-		.navigation
-			width: 80%
-		.logo
-			width: 10%
-
-@media screen and (max-width: 800px)
-	.head_nav
+	@media screen and (max-width: 800px)
 		width: 100%
-		flex-direction: column
-		align-items: center
 
+
+/* header start */
+header
+	background: url('../img/BACKGROUND_header.png') no-repeat
+	background-size: cover
+	.head__nav
+		@include item_row
+		align-items: center
+		padding-top: 2%
+		.logo img
+			width: 150%
 		.navigation
+			@include item_row
+			text-transform: uppercase
+			width: 50%
+			font-weight: bold
+			.navigation__item__link
+				transition: .5s
+				font-size: 1em
+			.navigation__item__link:hover
+				color: #03bfcd
+		@media screen and (max-width: 1200px)
+			flex-direction: column
+			.navigation
+				width: 80%
+			.logo
+				width: 10%
+	@media screen and (max-width: 800px)
+		.head__nav
 			width: 100%
-			padding: 0
 			flex-direction: column
 			align-items: center
-			font-size: 2em
-			font-weight: lighter
-			margin-bottom: 15%
-			margin-top: 5%
-			justify-content: space-between
-			li
+			.navigation
 				width: 100%
-				text-align: center
-				margin: 2%
-				text-shadow: 3px 3px 5px black
-				a
+				padding: 0
+				flex-direction: column
+				align-items: center
+				font-size: 2em
+				font-weight: lighter
+				margin-bottom: 15%
+				margin-top: 5%
+				justify-content: space-between
+				.navigation__item
 					width: 100%
+					text-align: center
+					margin: 2%
+					text-shadow: 3px 3px 5px black
+					.navigation__item__link
+						width: 100%
+			.logo
+				width: 30%
+			.logo img
+				width: 100%
+				align-self: flex-start
+				margin-top: 0
 
-		.logo img
-			width: 100%
-			align-self: flex-start
-			margin-top: 0
-
-.logo img
-	width: 150%
-
-.navigation 
-	@include item_row
-	text-transform: uppercase
-	width: 50%
-	font-weight: bold
-	flex-wrap: nowrap
-	a
-		transition: .5s
-		font-size: 1em
-
-	a:hover
-		color: #03bfcd
-
-
-.head_main
-	@include item_column
-	margin: auto
-
-.head_main_title
-	color: #fff
-	padding-top: 10%
-	text-align: center
-	@media screen and (max-width: 1200px)
-		margin-top: 10%
-		padding-top: 0
-
-.head_main p 
-	color: #fff
-	width: 80%
-	text-align: center
-	font-size: 1.1em
-	line-height: 1.1em
-
-.head_main hr 
-	width: 5%
-	color: #03bfcd
-
-.l_more
-	border: 1px solid #fff
-	color: #03bfcd
-	padding: 10px
-	margin-top: 10%
-	margin-bottom: 5%
-	transition: .5s
-	&:hover
-		background-color: #0d0d32
-		color: white
+	.head_main
+		@include item_column
+		margin: auto
+		.head_main_title
+			color: #fff
+			padding-top: 10%
+			text-align: center
+			@media screen and (max-width: 1200px)
+				margin-top: 10%
+				padding-top: 0
+		.head_main_hr
+			width: 5%
+			color: #03bfcd
+		.head_main_info
+			color: #fff
+			width: 80%
+			text-align: center
+			font-size: 1.1em
+			line-height: 1.1em
+		.l_more
+			border: 1px solid #fff
+			color: #03bfcd
+			padding: 10px
+			margin-top: 10%
+			margin-bottom: 5%
+			transition: .5s
+			&:hover
+				background-color: #0d0d32
+				color: white
+	@media screen and (max-width: 800px)
+		width: 100%
+		.head_main
+			width: 95%
+			.head_main_title
+				width: 95%
+				font-size: 1.5em
+				padding: 0
+				order: 1
+				text-shadow: 1px 1px 10px black
+				font-weight: lighter
+			.head_main_hr
+				width: 90%
+				margin: 0
+			.head_main_info
+				text-align: justify
+				width: 95%
+				margin: 0
+				padding-top: 10%
+				display: none
+			.l_more
+				display: none
+/*header end*/
 
 /* main start */
-
 .story
 	@include item_row
 	align-items: center
@@ -162,130 +152,99 @@ header
 	@media screen and (max-width: 1200px)
 		img
 			width: 25%
-
-.storyMain
-	display: flex
-	flex-direction: column
-	align-items: flex-start
-	padding-left: 
-	width: 75%
-	@media screen and (max-width: 1200px)
-		width: 70%
-
-
-	.l_more
-		margin: 0
+	.storyMain
 		display: flex
-		align-items: center
-
-	p
-		margin-top: 0
-
-.movie
-	@include item_row
-	margin: 0 auto
-	padding: 1%
-	background: url("../img/PUT YOUR BACKGROUND HERE 3.png")
-	background-size: cover
-	background-repeat: no-repeat
-	video
-		margin: 0 auto
-		@media screen and (max-width: 800px)
-			width: 100%
-			height: 100%
-	a
-		margin: 14%
-
-@media screen and (max-width: 800px)
-	.story
+		flex-direction: column
+		align-items: flex-start
+		padding-left:
+		width: 75%
+		@media screen and (max-width: 1200px)
+			width: 70%
+		.main_story__p
+			margin-top: 0
+		.l_more
+			margin: 0
+			display: flex
+			align-items: center
+	@media screen and (max-width: 800px)
 		flex-direction: column
 		align-items: center
 		margin: 0
 		padding-top: 10%
-
 		.storyMain
 			align-items: center
 			width: 95%
-
 		.imgStory
 			width: 30%
+
+.movie
+	@include item_row
+	margin: 0 auto
+	//padding: 1%
+	background-size: cover
+	background: url("../img/PUT YOUR BACKGROUND HERE 3.png") no-repeat
+	.main__video
+		margin: 0 auto
+		@media screen and (max-width: 800px)
+			width: 100%
+			height: 100%
 
 .expertise
 	@include item_column
 	padding-bottom: 5%
-
-	p
-		margin-top: 0
-
-	hr
+	.main_expertise__p
+		margin: 0 auto
+		text-align: center
+	.main_expertise__hr
 		width: 5%
-
-.allItems
-	display: flex
-	flex-direction: row
-	justify-content: center
-	flex-wrap: wrap
-	padding-top: 5%
-	padding-bottom: 3%
-
-	.items
-		@include item_column
-		width: 33%
-		text-align: center
-		padding-bottom: 2%
-		border-bottom: 1px solid #555
-		border-right: 1px solid #555
-
-	.items:nth-child(3)
-		border-right: none
-
-	.items:nth-child(6)
-		border-right: none
-	
-	.items:nth-child(4)
-		border-bottom: none
-
-	.items:nth-child(5)
-		border-bottom: none
-
-	.items:nth-child(6)
-		border-bottom: none
-.items
-	img
-		padding-top: 10%
-		padding-bottom: 10%
-
-	p
-		padding-left: 5%
-		padding-right: 5%
-
-
-@media screen and (max-width: 800px)
-	.expertise p
-		text-align: center
-
+		@media screen and (max-width: 800px)
+			width: 50%
 	.allItems
-		@include item_column
-
+		display: flex
+		flex-direction: row
+		justify-content: center
+		flex-wrap: wrap
+		padding-top: 5%
+		padding-bottom: 3%
 		.items
-			width: 95%
-			border: none
-			padding: 0
-			margin: 0
-		
-		.items
+			@include item_column
+			width: 33%
+			text-align: center
+			padding-bottom: 2%
+			border-bottom: 1px solid #555
+			border-right: 1px solid #555
 			img
-				padding-top: 5%
-				padding-bottom: 5%
-
-			p
-				margin-tops: 0
+				padding-top: 10%
+				padding-bottom: 10%
+			.main_items__p
 				padding-left: 5%
 				padding-right: 5%
+				@media screen and (max-width: 800px)
+					text-align: center
+			@media screen and (max-width: 800px)
+				width: 95%
+				border: none
+				padding: 0
+				margin: 0
+				.main_items__img
+					padding-top: 5%
+					padding-bottom: 5%
+				.main_items__p
+					padding-left: 5%
+					padding-right: 5%
+		.items:nth-child(3)
+			border-right: none
+		.items:nth-child(6)
+			border-right: none
+		.items:nth-child(4)
+			border-bottom: none
+		.items:nth-child(5)
+			border-bottom: none
+		.items:nth-child(6)
+			border-bottom: none
 
 .ourTeamBack
-	background-image: url('../img/BACKGROUND_header.png')
-	background-repeat: no-repeat
+	background: url('../img/BACKGROUND_header.png') no-repeat
 	background-size: cover
 	color: #fff
 	text-align: center
@@ -293,20 +252,18 @@ header
 	.ourTeam
 		@include item_column
 		padding: 2%
-		h2
+		.main_team__title
 			margin-bottom: 0
 			font-weight: lighter
 			font-size: 2em
-		p
+		.main_team__p
 			font-size: larger
 			font-weight: lighter
-		hr
+		.main_team__hr
 			width: 5%
 			margin-top: 0
-
 		.l_more
 			margin: 0
-			
 		.allUnits
 			display: flex
 			flex-direction: row
@@ -348,13 +305,18 @@ header
 					font-size: large
 					color: rgba(0,0,0,1)
 			
-.conection
+.connection
 	@include item_row
 	padding: 5%
+	@media screen and (max-width: 800px)
+		.connection
+			flex-direction: column
+			align-items: center
 	.formAll
 		flex-direction: column
 		width: 49%
-
+		@media screen and (max-width: 800px)
+			width: 95%
 		.formA
 			display: flex
 			flex-direction: column
@@ -375,13 +337,16 @@ header
 	display: flex
 	flex-direction: column
 	width: 35%
+	@media screen and (max-width: 800px)
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		width: 95%
 	.allClients
 		display: flex
 		flex-direction: row
 		justify-content: space-around
 		flex-wrap: wrap
-		@media screen and (max-width: 800px)
-			//flex-direction: column
 		.client_unit
 			padding: 3%
 			@media screen and (max-width: 1500px)
@@ -397,126 +362,97 @@ header
 				img
 					width: 100%
 
+/* main end */
 
-
-@media screen and (max-width: 800px)
-	.conection
-		flex-direction: column
-		align-items: center
-
-		.formAll
-			width: 95%
-
-		.clients
-			flex-direction: row
-			flex-wrap: wrap
-			justify-content: center
-			width: 95%
-
+/*footer start*/
 footer
-	background-image: url('../img/PUT YOUR BACKGROUND HERE footer.png')
-	background-repeat: no-repeat
+	background: url('../img/PUT YOUR BACKGROUND HERE footer.png') no-repeat
 	background-size: cover
 	color: #fff
 	padding: 3%
-
 	.footUp
 		@include item_row
 		margin: auto
 		width: 80%
-			
-		.foot_item	
-			width: 40%
-			//padding-right: 10%
-
-			.adress
-				display: flex
-				flex-direction: row
-				align-items: center
-
-
-
-			.social		
-				@include item_row
-				padding: 2%
-
-.adress
-	width: 100%
-	p
-		padding-left: 2%				
-
-.soc
-	display: flex
-	flex-direction: row
-	justify-content: center
-	align-items: center
-	margin: auto
-	border: 1px solid #fff
-	border-radius: 30%
-	padding: 2%
-	width: 25px
-	height: 25px
-	a
-		display: flex
-		flex-direction: row
-		justify-content: center
-		width: 100%
-		margin: 0 auto
-		img
-			margin: 0 auto
-
-.social
-	width: 100%
-.soc:hover
-	border-color: #03bfcd
-	color: #03bfcd
-.phone
-	display: flex
-	flex-direction: row
-	align-items: center
-.footUn
-	@include item_row
-	width: 80%
-	margin: auto
-
-	.footHelp
-		display: flex
-		flex-direction: row
-		padding: 0
-
-@media screen and (max-width: 800px)
-	footer
-		.footUp
+		@media screen and (max-width: 800px)
 			width: auto
 			flex-direction: column
 			align-items: center
-			.foot_item
+		.foot_item	
+			width: 40%
+			@media screen and (max-width: 800px)
 				@include item_column
 				width: 100%
 				img
 					margin: 0 auto
-				p
+				.address_item__p
 					text-align: justify
 				.studio-title
 					margin: 0
 					align-self: flex-start
-				.phone
-					display: flex
-					flex-direction: row
-					align-items: center
-				.adress
-					width: 100%
-					p
-						margin: 0
 				.social
 					width: 100%
 			.foot_item:first-child
 				@include item_column
 
-
-		.footUn
+			.adress
+				display: flex
+				flex-direction: row
+				align-items: center
+				width: 100%
+				@media screen and (max-width: 800px)
+					width: 100%
+					.address_item__p
+						margin: 0
+				.address_item__p
+					padding-left: 2%
+				.social
+					@include item_row
+					padding: 2%
+					width: 100%
+					.soc
+						display: flex
+						flex-direction: row
+						justify-content: center
+						align-items: center
+						margin: auto
+						border: 1px solid #fff
+						border-radius: 30%
+						padding: 2%
+						width: 25px
+						height: 25px
+						.social_item__a
+							display: flex
+							flex-direction: row
+							justify-content: center
+							width: 100%
+							margin: 0 auto
+							img
+								margin: 0 auto
+					.soc:hover
+						border-color: #03bfcd
+						color: #03bfcd
+			.phone
+				display: flex
+				flex-direction: row
+				align-items: center
+				@media screen and (max-width: 800px)
+					display: flex
+					flex-direction: row
+					align-items: center
+	.footUn
+		@include item_row
+		width: 80%
+		margin: auto
+		@media screen and (max-width: 800px)
 			flex-direction: column
 			align-items: center
+		.footHelp
+			display: flex
+			flex-direction: row
+			padding: 0
+
+/*footer end*/
 		
 
 
